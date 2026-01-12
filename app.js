@@ -105,6 +105,13 @@ const products = [
     },
 ];
 
+let headings = document.querySelectorAll(".h");
+headings.forEach(element => {
+    element.innerHTML = "Updated Content";
+});
+
+let values = Array.from(headings).map(element => element.innerHTML);
+console.log(values);
 
 
 const foundReview = products.some(product => 
@@ -136,6 +143,8 @@ function run(){
     element.innerHTML = inp;
 });
 }
+
+
 
 // let values = document.querySelector(".btn").values;
 
@@ -193,10 +202,31 @@ const digits = [1, 2, 3, 4, 5, ];
 
 
 
+let btninc  = document.getElementsByClassName("inc");
+let btndec  = document.getElementsByClassName("dec");
+let count  = document.getElementsByClassName("count");
+let countcur  = 0;  // Initial counter value
 
 
+count[0].addEventListener("click", function() {
+    console.log("count clicked, current value: " + countcur);
+});
 
 
+btninc[0].addEventListener("click", function() {
+    countcur++;  
+    count[0].textContent = countcur;  
+    console.log("Incremented to: " + countcur);
+});
+
+
+btndec[0].addEventListener("click", function() {
+    countcur--;  
+    count[0].textContent = countcur;  
+    console.log("Decremented to: " + countcur);
+});
+
+console.log(count);  
 
 
 

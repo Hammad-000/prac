@@ -1,0 +1,46 @@
+{
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiRed",
+    "terminal.integrated.profiles.windows": {
+
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": {
+                "id": "terminal-cmd"
+            }
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "icon": "terminal-git-bash"
+        }
+    },
+    "terminal.integrated.suggest.insertTrailingSpace": false,
+    "npm.scriptRunner": "auto",
+    "debug.javascript.autoAttachSmartPattern": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**",
+        "**/$KNOWN_TOOLS$/**",
+        ""
+    ],
+    "notebook.codeActionsOnSave": {
+
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        ""
+    ],
+    "debug.javascript.autoAttachFilter": "always",
+    "debug.javascript.breakOnConditionalError": true,
+    "terminal.explorerKind": "both",
+    "terminal.integrated.accessibleViewFocusOnCommandExecution": false,
+    "terminal.integrated.accessibleViewPreserveCursorPosition": false,
+    "terminal.integrated.suggest.runOnEnter": "exactMatch",
+    "task.quickOpen.showAll": true,
+    "interactiveWindow.promptToSaveOnClose": true
+}
