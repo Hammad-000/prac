@@ -104,6 +104,45 @@ const products = [
         ],
     },
 ];
+//=================================================================================================
+
+// async function getData() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//         const data = await response.json();
+
+//         // Map through the data and extract title and body for each post
+//         console.log("Data fetched successfully:");
+//         data.slice(0, 5).forEach(dt => {
+//             console.log(`<p>Title: ${dt.title}</p>`);
+//             // document.write(`<p>Title: ${dt.title}</p>`);
+//             console.log(`<p>Body: ${dt.body}</p>`);
+//         });
+
+//     } catch (error) {
+//         console.log("Failed to fetch data:", error);
+//     }
+// }
+
+// getData();
+
+//=================================================================================================
+
+const digits = [1, 2, 3, 4, 5, ];
+
+
+let imgsl =  ["one", "two","three","four","five"];
+
+imgsl.map((c)=> {  `<p>${c}</p>`;
+
+console.log(imgsl)
+
+
+} )
+
+
+
+ console.log(digits.map(m=>`${m}`));
 
 let headings = document.querySelectorAll(".h");
 headings.forEach(element => {
@@ -121,6 +160,7 @@ const foundReview = products.some(product =>
 console.log(foundReview);
 
 console.log("===================================");
+
 
 
 
@@ -142,6 +182,16 @@ function run(){
     Array.from(headinds).forEach(element => {
     element.innerHTML = inp;
 });
+}
+
+
+function del() {
+    let headinds = document.querySelectorAll(".h, h4");
+
+    headinds.forEach(element => {
+        element.innerHTML = ""; 
+    });
+    console.log('Content deleted');
 }
 
 
@@ -174,9 +224,7 @@ if (pet.name == "cat") {
 
     console.log("========================================");
 
-const digits = [1, 2, 3, 4, 5, ];
 
- console.log(digits);
 
  
 // let fav = prompt("Enter fruit name")
@@ -202,10 +250,17 @@ const digits = [1, 2, 3, 4, 5, ];
 
 
 
+
+
+
+
+
+
 let btninc  = document.getElementsByClassName("inc");
 let btndec  = document.getElementsByClassName("dec");
 let count  = document.getElementsByClassName("count");
 let countcur  = 0;  // Initial counter value
+
 
 
 count[0].addEventListener("click", function() {
