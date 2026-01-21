@@ -128,32 +128,60 @@ const products = [
 
 //=================================================================================================
 
-const digits = [1, 2, 3, 4, 5, ];
 
 
-let imgsl =  ["one", "two","three","four","five"];
-
-imgsl.map((c)=> {  `<p>${c}</p>`;
-
-console.log(imgsl)
-
-
-} )
+console.log(products[1].lenght);
 
 
 
- console.log(digits.map(m=>`${m}`));
+
+
+
+// console.log(numbers)
+
+
+// const digits = [1, 2, 3, 4, 5, ];
+
+// let numbers = document.getElementsByClassName("numbers")[0].innerHTML
+
+// let imgsl =  ["one", "two","three","four","five"];
+// digits.map((c)=> {  let newDiv = `<div><p>${c}</p><p>${numbers.innerHTML}</p></div>`;
+// console.log(digits)} )
+
+
+// let numbersElement = document.getElementsByClassName("numbers")[0];
+const digits = [1, 2, 3, 4, 5];
+
+
+
+        // Get the element with the class 'numbers'
+        let numbersElement = document.getElementsByClassName("numbers")[0];
+
+        // Loop through the digits array and create HTML content
+        digits.map((c, index) => {
+            // Construct the new div element as a string
+            let newDiv = `<div><p>${digits[index]} </p></div>`;
+
+            // Append the new div to the 'numbers' element
+            numbersElement.innerHTML += newDiv;
+
+            console.log(newDiv); // Optional, to log the generated HTML
+        });
+
+
+
+//  console.log(digits.map(m=>`${m}`));
 
 let headings = document.querySelectorAll(".h");
 headings.forEach(element => {
     element.innerHTML = "Updated Content";
 });
 
-let values = Array.from(headings).map(element => element.innerHTML);
-console.log(values);
+// let values = Array.from(headings).map(element => element.innerHTML);
+// console.log(values);
 
 
-const foundReview = products.some(product => 
+const foundReview = products.find(product => 
   product.reviews.some(review => review.user === "Ahmad")
 );
 
@@ -249,6 +277,8 @@ if (pet.name == "cat") {
 // });
 
 
+let cash = 10;
+cash > 12 ? console.log("big") : console.log("no");
 
 
 
