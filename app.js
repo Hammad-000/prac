@@ -150,22 +150,29 @@ console.log(products[1].lenght);
 
 
 // let numbersElement = document.getElementsByClassName("numbers")[0];
+
+function time() {
+    setTimeout(() => {
+        console.log("This runs after the timeout");
+    },3000);  
+
+    console.log("Set");
+}
+time()
+
+
+
+//=======================================================================================================
 const digits = [1, 2, 3, 4, 5];
 
-
-
-        // Get the element with the class 'numbers'
         let numbersElement = document.getElementsByClassName("numbers")[0];
 
-        // Loop through the digits array and create HTML content
         digits.map((c, index) => {
-            // Construct the new div element as a string
             let newDiv = `<div><p>${digits[index]} </p></div>`;
 
-            // Append the new div to the 'numbers' element
             numbersElement.innerHTML += newDiv;
 
-            console.log(newDiv); // Optional, to log the generated HTML
+            console.log(newDiv); // 
         });
 
 
