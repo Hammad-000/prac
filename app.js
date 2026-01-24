@@ -128,10 +128,27 @@ const products = [
 
 //=================================================================================================
 
+const user = { name: 'Alice', age: 30 };
+const { name, age } = user; 
+console.log(name, age); 
 
+// let  ask = prompt("how are you")
 
-console.log(products[1].lenght);
+// document.writeln(ask)
 
+ let  range =   document.getElementById("range")
+
+ const valueDisplay = document.getElementById('value-display');
+
+        range.addEventListener('input', function() {
+            valueDisplay.textContent = range.value;
+            
+            filterContentBasedOnRange(range.value);
+        });
+
+        function filterContentBasedOnRange(value) {
+            console.log("Range Slider value: " + value);
+        }
 
 
 
@@ -172,7 +189,7 @@ const digits = [1, 2, 3, 4, 5];
 
             numbersElement.innerHTML += newDiv;
 
-            console.log(newDiv); // 
+            // console.log(newDiv); // 
         });
 
 
@@ -192,7 +209,7 @@ const foundReview = products.find(product =>
   product.reviews.some(review => review.user === "Ahmad")
 );
 
-console.log(foundReview);
+// console.log(foundReview);
 
 console.log("===================================");
 
@@ -201,7 +218,7 @@ console.log("===================================");
 
 let favoriteProducts = products.find(product => product.id == 101
 );  
-console.log(favoriteProducts);
+// console.log(favoriteProducts);
 
 console.log("===================================");
 
@@ -229,14 +246,22 @@ function del() {
     console.log('Content deleted');
 }
 
+function find(){
+    let inp = document.querySelector(".inp").value;
+    let  find = inp.textContent
+    
+
+
+}
+
 
 
 // let values = document.querySelector(".btn").values;
 
-values = Array.from(headinds).map(element => {
-    return element.innerHTML;
-});
-console.log(values);
+// values = Array.from(headinds).map(element => {
+//     return element.innerHTML;
+// });
+// console.log(values);
 
 // Array.from(headinds).forEach(element => {
 //     element.innerHTML = "ok";
