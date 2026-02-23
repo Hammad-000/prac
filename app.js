@@ -104,6 +104,9 @@ const products = [
         ],
     },
 ];
+
+
+
 //=================================================================================================
 
 // async function getData() {
@@ -126,6 +129,58 @@ const products = [
 
 // getData();
 
+let value = ["ONE","TWO","THREE"];
+
+let slider = document.querySelector(".slider"); // add dot
+let prevBtn = document.getElementById("prev");
+let nextBtn = document.getElementById("next");
+
+let index = 0; // rename properly
+
+function showSlide() {
+  slider.innerText = value[index]; // use correct variable
+}
+
+// Show first value initially
+showSlide();
+
+// Next button
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % value.length;
+  showSlide();
+});
+
+// Previous button
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + value.length) % value.length;
+  showSlide();
+});
+ 
+
+
+const url = "https://jsonplaceholder.typicode.com/users"
+   fetch(url).then(res =>  res.json())
+   .then(json=>  console.log(json))
+
+
+
+let marks = 100
+
+if(marks > 150){
+    console.log("not ok")
+}else{
+        console.log("verygood")
+}
+
+
+
+
+function add(a,b) {
+   return 5 + 5
+}
+console.log(add())
+
+
 //=================================================================================================
 
 const user = { name: 'Alice', age: 30 };
@@ -136,23 +191,19 @@ console.log(name, age);
 
 // document.writeln(ask)
 
- let  range =   document.getElementById("range")
+ let range = document.getElementById("range");
+const valueDisplay = document.getElementById('value-display');
 
- const valueDisplay = document.getElementById('value-display');
+range.addEventListener('input', function() {
+    valueDisplay.textContent = range.value;
+    filterContentBasedOnRange(range.value);
+});
 
-        range.addEventListener('input', function() {
-            valueDisplay.textContent = range.value;
-            
-            filterContentBasedOnRange(range.value);
-        });
+function filterContentBasedOnRange(value) {
+    console.log("Range Slider value: " + value);
+}
 
-        function filterContentBasedOnRange(value) {
-            console.log("Range Slider value: " + value);
-        }
-
-
-
-
+        
 
 // console.log(numbers)
 
@@ -220,7 +271,6 @@ let favoriteProducts = products.find(product => product.id == 101
 );  
 // console.log(favoriteProducts);
 
-console.log("===================================");
 
 let headinds = document.getElementsByClassName("h");
 
@@ -269,20 +319,12 @@ function find(){
 
 //  (headinds.length > 0)  ? console.log("yes") : null  ; 
 
-let pet = {name : "cat"};
 
-
-if (pet.name == "cat") {
-    console.log("meow");
-} else {
-    console.log("woof");
-}
 
     // for (let i = 0; i < headinds.length; i++) {
     //     headinds[i].innerHTML = "hy";
     // }
 
-    console.log("========================================");
 
 
 
@@ -487,6 +529,5 @@ console.log(count);
 // //       task.style.${ul}
 // //   });
 // // }
-
 
 
