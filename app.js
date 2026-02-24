@@ -107,6 +107,28 @@ const products = [
 
 
 
+let cards =  [
+    
+    {     name:"T shirt",  price:800 , size:"large"},
+    {     name:"Paint",  price:1200 , size:"large"},
+    {     name:"Shirt",  price:1000 , size:"medium"}
+
+
+]
+
+// let create = document.getElementsByClassName("create")[0].addEventListener("click",Push)
+
+let createButton = document.querySelector(".create");
+
+createButton.addEventListener("click", Push);
+
+function Push() {
+  let pElement = createButton.parentElement.querySelector("p");
+  
+  pElement.innerHTML = "Hey, hello!";  
+}
+
+console.log(createButton);
 //=================================================================================================
 
 // async function getData() {
@@ -131,26 +153,26 @@ const products = [
 
 let value = ["ONE","TWO","THREE"];
 
-let slider = document.querySelector(".slider"); // add dot
+let slider = document.querySelector(".slider");
 let prevBtn = document.getElementById("prev");
 let nextBtn = document.getElementById("next");
 
-let index = 0; // rename properly
+let index = 0; 
 
 function showSlide() {
-  slider.innerText = value[index]; // use correct variable
+  slider.innerText = value[index]; 
 }
 
-// Show first value initially
+
 showSlide();
 
-// Next button
+
 nextBtn.addEventListener("click", () => {
   index = (index + 1) % value.length;
   showSlide();
 });
 
-// Previous button
+
 prevBtn.addEventListener("click", () => {
   index = (index - 1 + value.length) % value.length;
   showSlide();
@@ -275,17 +297,19 @@ let favoriteProducts = products.find(product => product.id == 101
 let headinds = document.getElementsByClassName("h");
 
 // [...headinds].forEach(element => {
-//     element.innerHTML = "ok";
-// });
-
-function run(){
-    let inp = document.querySelector(".inp").value;
-    console.log(inp);
-    Array.from(headinds).forEach(element => {
-    element.innerHTML = inp;
-});
-}
-
+    //     element.innerHTML = "ok";
+    // });
+    
+    function run(){
+        let inp = document.querySelector(".inp").value;
+        console.log(inp);
+        Array.from(headinds).forEach(element => {
+            element.innerHTML = inp;
+            
+        });
+    }
+    
+   
 
 function del() {
     let headinds = document.querySelectorAll(".h, h4");
@@ -298,7 +322,7 @@ function del() {
 
 function find(){
     let inp = document.querySelector(".inp").value;
-    let  find = inp.textContent
+    let  find = inp.i
     
 
 
