@@ -115,6 +115,15 @@ let cards =  [
 
 
 ]
+cards.push({name:"tie", price:200, size:"small"})
+
+let  set = cards.map((m => m.name))
+console.log(set)
+
+for  (let i = 0; i < cards.length; i ++   ){
+    console.log(cards[i].name)
+}
+
 
 // let create = document.getElementsByClassName("create")[0].addEventListener("click",Push)
 
