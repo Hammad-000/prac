@@ -117,8 +117,13 @@ let cards =  [
 ]
 cards.push({name:"tie", price:200, size:"small"})
 
+
 let  set = cards.map((m => m.name))
 console.log(set)
+
+let search = cards.filter((f => f.name === "Paint"))
+console.log(search);
+
 
 for  (let i = 0; i < cards.length; i ++   ){
     console.log(cards[i].name)
@@ -172,9 +177,7 @@ function showSlide() {
   slider.innerText = value[index]; 
 }
 
-
 showSlide();
-
 
 nextBtn.addEventListener("click", () => {
   index = (index + 1) % value.length;
