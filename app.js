@@ -106,6 +106,18 @@ const products = [
 ];
 
 
+let word  = ["hye", "hellow", "how are you"]  
+
+let newWord = word.map(m => m.toUpperCase());  
+console.log(newWord)
+
+// for(let index = 0; index < word.length; index++) {
+//     const element = word[index];
+    
+//     console.log(element)
+// }
+
+
 
 let cards =  [
     
